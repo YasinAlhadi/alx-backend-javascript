@@ -6,7 +6,7 @@ describe('getPaymentTokenFromAPI', () => {
     it('getPaymentTokenFromAPI returns the right token', (done) => {
         getPaymentTokenFromAPI(true)
             .then((response) => {
-                expect(response).to.include({ data: 'Successful response from the API' });
+                expect(response).to.deep.equal({ data: 'Successful response from the API' });
                 done();
             });
     });
